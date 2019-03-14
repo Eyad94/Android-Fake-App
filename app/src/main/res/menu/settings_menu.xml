@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:title="@string/sms"
+            android:id="@+id/smsOption"
+            android:icon="@drawable/ic_menu_overflow_lt"
+            android:orderInCategory="1"/>
+
+    <item
+            android:title="@string/settings"
+            android:id="@+id/settingsOption"
+            android:icon="@drawable/ic_menu_overflow_lt"
+            android:orderInCategory="2"/>
+
+    <item
+        android:orderInCategory="3"
+        android:title="@string/about"
+        android:id="@+id/aboutOption"/>
+
+    <item
+            android:orderInCategory="4"
+            android:title="@string/exit"
+            android:id="@+id/exitOption"/>
+
+</menu>

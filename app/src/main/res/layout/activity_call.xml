@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main"
+        android:background="@drawable/bg"
+        tools:context="com.eyad.batterylife.CallMalwareActivity">
+
+    <RelativeLayout
+            android:id="@+id/callInfo"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_height="52dp">
+
+        <TextView
+                android:id="@+id/callDuration"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="sans-serif-light"
+                android:layout_width="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <ImageView
+            android:layout_below="@+id/callInfo"
+            android:layout_width="match_parent"
+            android:id="@+id/contactPhoto"
+            android:scaleType="centerCrop"
+            android:layout_height="200dp"/>
+
+    <RelativeLayout
+            android:id="@+id/contactInfo"
+            android:layout_below="@+id/contactPhoto"
+            android:layout_width="match_parent"
+            android:padding="@dimen/layout_margin"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/callerName"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="53dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/phoneNumber"
+                android:fontFamily="sans-serif-light"
+                android:textSize="20sp"
+                android:textColor="@color/grey"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/callerName"
+                android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/decline"
+                android:layout_width="0dp"
+                android:background="@drawable/button"
+                android:layout_weight="1"
+                android:onClick="onClickEndCall"
+                android:layout_height="62dp"/>
+
+        <Button
+                android:id="@+id/answer"
+                android:onClick="onClickAnswerCall"
+                android:background="@drawable/button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="62dp"/>
+
+    </LinearLayout>
+
+    <Button
+            android:layout_width="240dp"
+            android:id="@+id/endCall"
+            android:onClick="onClickEndCall"
+            android:visibility="gone"
+            android:background="@drawable/button"
+            android:layout_centerInParent="true"
+            android:layout_alignParentBottom="true"
+            android:layout_height="62dp"/>
+
+</RelativeLayout>

